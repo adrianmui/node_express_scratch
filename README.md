@@ -1,6 +1,8 @@
 # This is a simple Node ExpressJS application
 # to demonstrate the simple functionality of Node/Express without any # middleware.
 
+`http://localhost:3000/hello`
+
 ## From what I understand so far:
 
 * ExpressJS is similarity to that of a micro-backend framework such as Sinatra
