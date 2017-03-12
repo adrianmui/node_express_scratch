@@ -5,6 +5,8 @@ const morgan = require('morgan');
 
 let app = express();
 
+app.set('view engine', 'ejs');
+
 /* middleware stacks */
 app.use(create('Adrian Mui middleware'));
 // masking request headers to prevent security attacks
