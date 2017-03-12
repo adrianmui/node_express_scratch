@@ -1,14 +1,12 @@
 const express = require('express');
-
+const create = require('./middleware');
 let app = express();
 
-app.use((request, response, next) => {
-    request.user = { name: 'Adrian' };
-    next();
-});
+//middleware stackcs
+app.use(create('Adrian Mui middleware'));
 
 app.get('/hello', (request, response) => {
     response.send(`<h1> Hello ${request.user.name} </h1>`)
-})
+});
 
 app.listen('3000');
