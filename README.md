@@ -1,7 +1,25 @@
+Author: Adrian Mui
 # This is a simple Node ExpressJS application (not currently hooked up to a FE-framework)
 # to demonstrate the simple functionality of Node/Express and using our own 'middleware' stacks.
+# Full-Stack App from Scratch. 
 
 `http://localhost:3000/hello`
+
+## TODO
+
+```
+    npm install
+    npm update
+    grunt
+```
+
+### QuickHelpers
+```
+    // untrack files/directories
+    git rm -r --cached <file>
+    // delete untracked files/directories from git
+    git clean -n -d
+```
 
 ## From what I understand so far:
 
@@ -15,3 +33,4 @@
 * using Grunt (alt: gulp[newer], webpack[js recompile, but u can combine it w/grunt], etc)
     - because of its specialty in synchronous tasks.
     - tons of plugins
+
