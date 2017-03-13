@@ -1,0 +1,30 @@
+.DS_Store
+
+# Webroot populated by Grunt
+public
+
+# Logs / Code Coverage
+# logs
+# *.log
+npm-debug.log*
+# coverage
+
+# npm
+node_modules
+.npm
+
+# have yet to run into this yet. I only want to include things I learn about.
+# Runtime data
+    # pids
+    # *.pid
+    # *.seed
+    # *.pid.lock
+
+# Elastic Beanstalk Files
+    # .elasticbeanstalk/*
+    # !.elasticbeanstalk/*.cfg.yml
+    # !.elasticbeanstalk/*.global.yml
+
+# EB Deployment artifacts 
+    # deploy
+
