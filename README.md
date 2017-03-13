@@ -1,4 +1,4 @@
-# This is a simple Node ExpressJS application
+# This is a simple Node ExpressJS application (not currently hooked up to a FE-framework)
 # to demonstrate the simple functionality of Node/Express and using our own 'middleware' stacks.
 
 `http://localhost:3000/hello`
@@ -11,3 +11,7 @@
     - Hapi: server-side APIs, html rendering as well..(I HATE THIS)
     - Sails: opposite of Express. Sails is like Ruby, has ORM, pretty much full BE stack. Doesn't have much support tho.
     - Koa: created generator-based API. Nowadays uses promises and asynch requests.
+* change the request response headers to provide more security
+* using Grunt (alt: gulp[newer], webpack[js recompile, but u can combine it w/grunt], etc)
+    - because of its specialty in synchronous tasks.
+    - tons of plugins
