@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 
 # Webroot populated by Grunt
 public
@@ -9,8 +10,8 @@ public
 npm-debug.log*
 # coverage
 
-# npm
-node_modules
+# npm (in this case I want to push to git)
+# node_modules
 .npm
 
 # have yet to run into this yet. I only want to include things I learn about.

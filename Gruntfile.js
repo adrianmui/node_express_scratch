@@ -14,13 +14,14 @@ module.exports = function(grunt) {
                 dest: 'public/app.js'
             }
         },
-
-
         uglify: {
             dist: {
                 files: {
                     'public/app.min.js': 'public/app.js'
                 }
+            },
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
                 src: './<%= pkg.name %>.js',
@@ -34,5 +35,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // ex: terminal >> grunt 
-    grunt.registerTask('default', ['browserify', 'uglify']);
+    grunt.registerTask('default', ['browserify', 'uglify', 'hasCompleted']);
+
+    // A very basic default task.
+    grunt.registerTask('hasCompleted', 'Log some stuff.', () => {
+        grunt.log.write('All tasks have FINISHED..').ok()
+        grunt.log.write('line 2..').ok();
+    });
 }
