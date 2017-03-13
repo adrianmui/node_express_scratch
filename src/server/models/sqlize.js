@@ -1,6 +1,16 @@
-const Sequelize = require('sequelize');
+let Sequelize = require('sequelize');
+require('dotenv').config();
 
-let sequelize = new Sequelize('postgres://ajniwwtl:X74axo0TMElLgPKAkpOk4yxIKHDAZHX0@stampy.db.elephantsql.com:5432/ajniwwtl');
+let sequelize = new Sequelize(process.env.DB_URL, {
+    host: 'localhost',
+    dialect: 'postgres',
+
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 1000
+    },
+});
 
 // testing connection
 sequelize
