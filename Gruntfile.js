@@ -76,12 +76,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-nodemon');
 
+    // self tasks
+    grunt.loadTasks('bin/tasks');
+
     // ex: terminal >> grunt 
     grunt.registerTask('default', ['sass:dev', 'browserify', 'uglify', 'hasCompleted']);
 
+    grunt.registerTask('collect_static', ['hello_world']);
+
     // A very basic default task.
     grunt.registerTask('hasCompleted', 'Log some stuff.', () => {
-        grunt.log.write('All tasks have FINISHED..').ok()
+        grunt.log.write('All tasks has FINISHED..').ok();
         grunt.log.write('line 2..').ok();
     });
 }
