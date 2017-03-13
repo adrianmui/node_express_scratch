@@ -1,38 +1,42 @@
 {
-  "name": "scratch",
-  "version": "1.0.0",
-  "description": "creating a node express app from scratch while building our own middleware stacks",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.15.2",
-    "morgan": "^1.8.1"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-browserify": "^5.0.0",
-    "grunt-concurrent": "^2.3.1",
-    "grunt-contrib-uglify": "^2.2.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-nodemon": "^0.4.2",
-    "grunt-sass": "^2.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adrianmui/node_express_scratch.git"
-  },
-  "keywords": [
-    "node",
-    "expressjs",
-    "javascript",
-    "grunt-cli"
-  ],
-  "author": "adrianmui",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adrianmui/node_express_scratch/issues"
-  },
-  "homepage": "https://github.com/adrianmui/node_express_scratch#readme"
+    "name": "scratch",
+    "version": "1.0.0",
+    "description": "creating a node express app from scratch while building our own middleware stacks",
+    "main": "index.js",
+    "dependencies": {
+        "express": "^4.15.2",
+        "morgan": "^1.8.1",
+        "pg": "^6.1.4",
+        "pg-hstore": "^2.3.2",
+        "sequelize": "^3.30.2"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-browserify": "^5.0.0",
+        "grunt-concurrent": "^2.3.1",
+        "grunt-contrib-uglify": "^2.2.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-nodemon": "^0.4.2",
+        "grunt-sass": "^2.0.0",
+        "nodemon": "^1.11.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adrianmui/node_express_scratch.git"
+    },
+    "keywords": [
+        "node",
+        "expressjs",
+        "javascript",
+        "grunt-cli"
+    ],
+    "author": "adrianmui",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/adrianmui/node_express_scratch/issues"
+    },
+    "homepage": "https://github.com/adrianmui/node_express_scratch#readme"
 }

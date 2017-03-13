@@ -15,7 +15,7 @@ app.use(anon());
 app.use(morgan('combined'));
 
 app.get('/hello', (request, response) => {
-    response.send(`<h1> Hello ${request.user.name} </h1>`)
+    response.send(`<h1> Hello ${request.user.name} </h1> <small> Omeda </small>`);
 });
 
 app.listen('3000');
