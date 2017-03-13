@@ -47,26 +47,33 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // watch: {
-        //     javascript: {
-        //         files: ['src/browser/js/**/*.js'],
-        //         tasks: ['browserify']
-        //     },
-        //     sass: {
-        //         files: 'src/browser/scss/**/*.scss',
-        //         tasks: ['sass:dev']
-        //     }
-        // },
-
+        watch: {
+            javascript: {
+                files: ['src/browser/js/**/*.js'],
+                tasks: ['browserify']
+            },
+            sass: {
+                files: 'src/browser/scss/**/*.scss',
+                tasks: ['sass:dev']
+            }
+        },
         // restart server node process during development
-        // nodemon: {
-        //     dev: {
-        //         script: 'bin/server.js',
-        //         options: {
-        //             ignore: ['node_modules/**', 'public', 'src/browser']
-        //         }
-        //     }
-        // },
+        nodemon: {
+            dev: {
+                script: 'index.js',
+                options: {
+                    ignore: ['node_modules/**', 'public', 'src/browser']
+                }
+            }
+        },
+        concurrent: {
+            dev: {
+                tasks: ['watch', 'nodemon'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
+        }
     });
 
     // third party grunt plugins
@@ -75,12 +82,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     // self tasks
     grunt.loadTasks('bin/tasks');
 
     // ex: terminal >> grunt 
-    grunt.registerTask('default', ['sass:dev', 'browserify', 'uglify', 'hasCompleted']);
+    grunt.registerTask('default', ['sass:dev', 'browserify', 'uglify', 'hasCompleted', 'concurrent:dev']);
 
     grunt.registerTask('collect_static', ['hello_world']);
 
