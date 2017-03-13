@@ -28,14 +28,56 @@ module.exports = function(grunt) {
                 dest: 'build/<%= pkg.name %>.min.js'
             }
         },
+        sass: {
+            dev: {
+                options: {
+                    sourceMap: true
+                },
+                files: {
+                    'public/app.css': 'src/browser/scss/app.scss'
+                }
+            },
+            dist: {
+                options: {
+                    sourceMap: false,
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'public/app.min.css': 'src/browser/scss/app.scss'
+                }
+            }
+        },
+        // watch: {
+        //     javascript: {
+        //         files: ['src/browser/js/**/*.js'],
+        //         tasks: ['browserify']
+        //     },
+        //     sass: {
+        //         files: 'src/browser/scss/**/*.scss',
+        //         tasks: ['sass:dev']
+        //     }
+        // },
+
+        // restart server node process during development
+        // nodemon: {
+        //     dev: {
+        //         script: 'bin/server.js',
+        //         options: {
+        //             ignore: ['node_modules/**', 'public', 'src/browser']
+        //         }
+        //     }
+        // },
     });
 
     // third party grunt plugins
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-nodemon');
 
     // ex: terminal >> grunt 
-    grunt.registerTask('default', ['browserify', 'uglify', 'hasCompleted']);
+    grunt.registerTask('default', ['sass:dev', 'browserify', 'uglify', 'hasCompleted']);
 
     // A very basic default task.
     grunt.registerTask('hasCompleted', 'Log some stuff.', () => {

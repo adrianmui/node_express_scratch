@@ -1,7 +1,7 @@
 Author: Adrian Mui
 # This is a simple Node ExpressJS application (not currently hooked up to a FE-framework)
-# to demonstrate the simple functionality of Node/Express and using our own 'middleware' stacks.
-# Full-Stack App from Scratch. 
+### to demonstrate the simple functionality of Node/Express and using our own 'middleware' stacks.
+### Full-Stack App from Scratch. 
 
 `http://localhost:3000/hello`
 
@@ -30,7 +30,8 @@ Author: Adrian Mui
     - Sails: opposite of Express. Sails is like Ruby, has ORM, pretty much full BE stack. Doesn't have much support tho.
     - Koa: created generator-based API. Nowadays uses promises and asynch requests.
 * change the request response headers to provide more security
-* using Grunt (alt: gulp[newer], webpack[js recompile, but u can combine it w/grunt], etc)
+* Grunt as a Tasks Manager/Builder
+    - alternatives are: gulp[newer], webpack[js recompile, but u can combine it w/grunt], etc)
     - because of its specialty in synchronous tasks.
     - tons of plugins
 
