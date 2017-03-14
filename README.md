@@ -36,4 +36,7 @@ Author: Adrian Mui
     - tons of plugins
 * dotenv for ENVIRONMENT variables
 * Mocha for Unit tests
+* Elastic Beanstalk, RDS
+    - elastic beanstalk creates more instances of project as http traffic goes higher, auto-scaling
+
 

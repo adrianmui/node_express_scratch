@@ -5,12 +5,9 @@ const db = require('./sqlize');
 
 // sample adding User model.
 let User = db.define('user', {
-    firstName: {
-        type: Sequelize.STRING
-    },
-    lastName: {
-        type: Sequelize.STRING
-    }
+    firstName: Sequelize.STRING,
+    lastName: Sequelize.STRING,
+    newUser: Sequelize.BOOLEAN
 });
 
 module.exports = User;

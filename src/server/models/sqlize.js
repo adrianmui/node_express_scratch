@@ -1,4 +1,6 @@
-let Sequelize = require('sequelize');
+'use strict';
+
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize = new Sequelize(process.env.DB_URL, {

@@ -10,6 +10,10 @@ public
 # logs
 *.log
 
+# config
+
+config/*.json
+
 npm-debug.log*
 # coverage
 
