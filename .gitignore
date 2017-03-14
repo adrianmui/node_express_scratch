@@ -6,13 +6,15 @@
 public
 
 # Logs / Code Coverage
+
 # logs
-# *.log
+*.log
+
 npm-debug.log*
 # coverage
 
-# npm (in this case I want to push to git)
-# node_modules
+# npm
+node_modules
 .npm
 
 # have yet to run into this yet. I only want to include things I learn about.
