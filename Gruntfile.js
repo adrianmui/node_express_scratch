@@ -73,6 +73,15 @@ module.exports = function(grunt) {
                     logConcurrentOutput: true
                 }
             }
+        },
+
+        mochaTest: {
+            test: {
+                options: {
+                    clearRequireCache: false
+                }
+            },
+            src: ['test/*.js']
         }
     });
 
@@ -83,6 +92,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-mocha-test');
 
     // self tasks
     grunt.loadTasks('bin/tasks');
@@ -90,7 +100,8 @@ module.exports = function(grunt) {
     // ex: terminal >> grunt 
     grunt.registerTask('default', ['sass:dev', 'browserify', 'uglify', 'hasCompleted', 'concurrent:dev']);
 
-    grunt.registerTask('collect_static', ['hello_world']);
+    grunt.registerTask('hello_world', ['hello_world']);
+    grunt.registerTask('test', ['mochaTest']);
 
     // A very basic default task.
     grunt.registerTask('hasCompleted', 'Log some stuff.', () => {

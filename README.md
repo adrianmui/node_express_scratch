@@ -34,4 +34,6 @@ Author: Adrian Mui
     - alternatives are: gulp[newer], webpack[js recompile, but u can combine it w/grunt], etc)
     - because of its specialty in synchronous tasks.
     - tons of plugins
+* dotenv for ENVIRONMENT variables
+* Mocha for Unit tests
 
