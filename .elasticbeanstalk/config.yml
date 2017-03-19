@@ -1,0 +1,21 @@
+branch-defaults:
+  master:
+    environment: node-express-dev
+    group_suffix: null
+environment-defaults:
+  node-express-dev:
+    branch: master
+    repository: node_express_scratch
+global:
+  application_name: node_express
+  branch: master
+  default_ec2_keyname: null
+  default_platform: Node.js
+  default_region: us-west-2
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: node_express_scratch
+  sc: git
+  workspace_type: Application
