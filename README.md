@@ -14,6 +14,8 @@ Author: Adrian Mui
 ```
 
 ### QuickHelpers
+
+* controlling what goes through git
 ```
     // untrack files/directories
     git rm -r --cached <file>
@@ -38,5 +40,6 @@ Author: Adrian Mui
 * Mocha for Unit tests
 * Elastic Beanstalk, RDS
     - elastic beanstalk creates more instances of project as http traffic goes higher, auto-scaling
+
 
 

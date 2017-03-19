@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         // restart server node process during development
         nodemon: {
             dev: {
-                script: 'index.js',
+                script: 'server.js',
                 options: {
                     ignore: ['node_modules/**', 'public', 'src/browser']
                 }
