@@ -40,6 +40,10 @@ Author: Adrian Mui
 * Mocha for Unit tests
 * Elastic Beanstalk, RDS
     - elastic beanstalk creates more instances of project as http traffic goes higher, auto-scaling
-
+* 5 types of Middleware
+    - 3rd party
+    - router
+    - application
+    - error-handling
 
 

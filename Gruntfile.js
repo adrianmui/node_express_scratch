@@ -7,13 +7,13 @@ module.exports = function(grunt) {
             options: {
                 browserifyOptions: {
                     debug: true
-                }
+                },
+                transform: [
+                    ["babelify", {
+                        "presets": ["es2015"]
+                    }]
+                ]
             },
-            transform: [
-                ["babelify", {
-                    "presets": ["es2015"]
-                }]
-            ],
             js: {
                 src: ['src/browser/js/app.js'],
                 dest: 'public/app.js'
