@@ -45,5 +45,6 @@ Author: Adrian Mui
     - router
     - application
     - error-handling
+* Express4 has Sub-Routers that kind of split off APIs into their own little stack.
 
 
