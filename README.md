@@ -47,5 +47,6 @@ Author: Adrian Mui
     - error-handling
 * Express4 has Sub-Routers that kind of split off APIs into their own little stack. It acts as a middleware with it's own set of routes and middleware.
 * Service Orientated Approach (bundling up an object's model, view, controller, routes). Node is encroaching method.
+* JWT(JSON-web-tokens) to protect APIs. No cookies, session authorizations.
 
 
